@@ -1,3 +1,4 @@
+
 """This file is provided as a starting template for writing your own unit
 tests to run and debug your minimax and alphabeta agents locally.  The test
 cases used by the project assistant are not public.
@@ -20,9 +21,10 @@ class IsolationTest(unittest.TestCase):
         self.player2 = "Player2"
         self.game = isolation.Board(self.player1, self.player2)
 
-    def test_example(self):
-        # TODO: All methods must start with "test_"
-        self.fail("Hello, World!")
+    def test_custom_score(self):
+        self.minimax_player = game_agent.MinimaxPlayer()
+        self.minimax_player.minimax(self.game, 1)
+        # game_agent.custom_score(self.game, self.player1)
 
 
 if __name__ == '__main__':
